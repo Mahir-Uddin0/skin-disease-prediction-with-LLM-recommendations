@@ -205,3 +205,35 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# =========================
+# Project-specific ignores
+# =========================
+
+# Environment variables
+.env
+
+# ML models (avoid pushing large files)
+models/*.pth
+models/*.pt
+
+# Datasets
+data/
+datasets/
+
+# Notebooks (optional but recommended)
+notebooks/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.tar
+
+# Temporary uploads (if used)
+uploads/
