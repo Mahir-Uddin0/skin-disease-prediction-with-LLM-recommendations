@@ -1,6 +1,20 @@
 import json
+import re
 from app.services.inference_service import predict_disease
 from app.services.llm_service import generate_recommendation
+
+
+def extract_json(text: str):
+    """
+    Extract JSON block safely from LLM output
+    """
+    try:
+        json_match = re.search(r"\{.*\}", text, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group())
+    except:
+        pass
+    return None
 
 
 def analyze_skin(image_bytes: bytes):
@@ -8,14 +22,13 @@ def analyze_skin(image_bytes: bytes):
 
     llm_raw = generate_recommendation(disease, confidence)
 
-    try:
-        llm_data = json.loads(llm_raw)
-    except:
-        # fallback if parsing fails
+    llm_data = extract_json(llm_raw)
+
+    if not llm_data:
         llm_data = {
-            "recommendations": llm_raw,
-            "next_steps": "Consult a dermatologist.",
-            "tips": "Keep skin clean and avoid irritation."
+            "recommendations": "Use gentle skincare and avoid irritants.",
+            "next_steps": "Consult a dermatologist for proper evaluation.",
+            "tips": "Keep skin moisturized and avoid scratching."
         }
 
     return {
