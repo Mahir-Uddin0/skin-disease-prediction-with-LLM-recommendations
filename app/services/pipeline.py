@@ -19,6 +19,11 @@ def extract_json(text: str):
 
 def analyze_skin(image_bytes: bytes):
     disease, confidence = predict_disease(image_bytes)
+    
+    # return {
+    #     "disease": disease,
+    #     "confidence": confidence
+    # }
 
     llm_raw = generate_recommendation(disease, confidence)
 
