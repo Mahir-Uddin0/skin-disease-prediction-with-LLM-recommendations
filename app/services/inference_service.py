@@ -1,7 +1,5 @@
-def predict_disease(image_bytes: bytes):
-    """
-    Simulates model prediction.
-    Later replace with real ML inference.
-    """
+from app.ml.inference.predict import predict_image
 
-    return "eczema", 0.92
+
+def predict_disease(image_bytes: bytes):
+    return predict_image(image_bytes)
