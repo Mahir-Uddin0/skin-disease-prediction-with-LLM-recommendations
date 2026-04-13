@@ -132,7 +132,7 @@ streamlit run frontend/app.py
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone Repository
-git clone https://github.com/Mahir-Uddin0/skin-disease-prediction-with-LLM-recommendations.git
+git clone https://github.com/Mahir-Uddin0/skin-disease-prediction-with-LLM-recommendations.git  
 cd skin-disease-ai
 
 
