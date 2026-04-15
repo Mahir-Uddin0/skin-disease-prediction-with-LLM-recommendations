@@ -16,23 +16,23 @@ Users can upload a skin image, and the system will:
 ---
 
 ## 🧠 System Architecture
-User (Frontend - Streamlit)
-           ↓
-FastAPI Backend (/analyze_skin)
-           ↓
-Image Preprocessing
-           ↓
-ML Model (DeiT-III)
-           ↓
-Prediction (Disease + Confidence)
-           ↓
-LLM (Gemini 2.5 Flash API)
-           ↓
-Structured Recommendations
-           ↓
-JSON Response
-
-
+User (Frontend - Streamlit)  
+           ↓  
+FastAPI Backend (/analyze_skin)  
+           ↓  
+Image Preprocessing  
+           ↓  
+ML Model (DeiT-III)  
+           ↓  
+Prediction (Disease + Confidence)  
+           ↓  
+LLM (Gemini 2.5 Flash API)  
+           ↓  
+Structured Recommendations  
+           ↓  
+JSON Response  
+  
+  
 ---
 
 ## 🏗️ Repository Structure
