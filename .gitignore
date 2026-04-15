@@ -222,7 +222,7 @@ data/
 datasets/
 
 # Notebooks (optional but recommended)
-notebooks/
+# notebooks/
 
 # Logs
 logs/
