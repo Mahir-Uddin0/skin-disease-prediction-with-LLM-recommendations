@@ -171,12 +171,13 @@ http://127.0.0.1:8000/docs
 
 ## 🐳 Docker (Optional)
 
-Build and run:
+Build the docker image: docker build -t skin-ai .  
+Run the container: docker run -p 8000:8000 skin-ai  
 
-docker build -t skin-ai .
-docker run -p 8000:8000 skin-ai
+or,
 
-
+Pull the Docker image from Docker Hub: `docker pull mahiruddin/skin-ai:latest`    
+Run the container: `docker run mahiruddin/skin-ai:latest`  
 
 ---
 

@@ -221,7 +221,7 @@ models/*.pt
 data/
 datasets/
 
-# Notebooks (optional but recommended)
+# Notebooks
 # notebooks/
 
 # Logs
