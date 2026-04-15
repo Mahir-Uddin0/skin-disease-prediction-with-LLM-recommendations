@@ -15,7 +15,7 @@ Users can upload a skin image, and the system will:
 
 ---
 
-## Project Demonstration Video Link: https://www.youtube.com/watch?v=F_P59tSAT-4
+### Project Demonstration Video Link: https://www.youtube.com/watch?v=F_P59tSAT-4
 
 ## 🧠 System Architecture
 User (Frontend - Streamlit)  
