@@ -18,7 +18,7 @@ def predict_image(image_bytes: bytes):
 
         confidence, pred_class = torch.max(probs, dim=1)
 
-    disease = CLASS_NAMES[(pred_class-1).item()]
+    disease = CLASS_NAMES[(pred_class).item()]
     confidence = confidence.item()
 
     return disease, confidence
