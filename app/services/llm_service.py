@@ -9,6 +9,12 @@ def generate_recommendation(disease: str, confidence: float):
     """
     Generate structured medical advice using Gemini (new SDK).
     """
+    if confidence < 0.75:
+        return {
+            "recommendations": "The model is uncertain about the diagnosis. Consider consulting a healthcare professional for further evaluation.",
+            "next_steps": "Monitor symptoms and seek medical advice if they worsen.",
+            "tips": "Maintain good skin hygiene and avoid irritants."
+        }
 
     prompt = f"""
 You are a medical assistant AI.
